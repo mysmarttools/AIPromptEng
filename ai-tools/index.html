@@ -1,1 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Best AI Tools | AI Tools Directory – AIPromptEng</title>
+
+    <meta name="description"
+        content="Discover the best AI tools for writing, image generation, video, coding, SEO, marketing, productivity and more. Explore AI tools with AIPromptEng.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://aiprompteng.vercel.app/ai-tools/">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="../" class="logo">
+            AI<span>Prompt</span>Eng
+        </a>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="../">Home</a>
+            <a href="./" class="active">AI Tools</a>
+            <a href="../prompts/">Prompts</a>
+            <a href="../guides/">Guides</a>
+            <a href="../reviews/">Reviews</a>
+            <a href="../comparisons/">Comparisons</a>
+            <a href="../news/">News</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button class="search-toggle" id="searchToggle" aria-label="Open search">
+                🔍
+            </button>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="search-bar" id="searchBar">
+
+        <div class="container search-wrapper">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search AI tools..."
+                autocomplete="off"
+            >
+
+            <button id="clearSearch">
+                Clear
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<main>
+
+<section class="tools-hero">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+            <a href="../">Home</a>
+            <span>›</span>
+            <span>AI Tools</span>
+        </div>
+
+        <div class="hero-content">
+
+            <span class="eyebrow">
+                🤖 AI TOOLS DIRECTORY
+            </span>
+
+            <h1>
+                Best AI Tools for Every Task
+            </h1>
+
+            <p>
+                Discover useful AI tools for writing, image generation,
+                video creation, coding, SEO, marketing, productivity and more.
+            </p>
+
+        </div>
+
+        <!-- SEARCH -->
+
+        <div class="directory-search">
+
+            <span>🔍</span>
+
+            <input
+                type="search"
+                id="directorySearch"
+                placeholder="Search AI tools by name or category..."
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DIRECTORY ================= -->
+
+<section class="directory-section">
+
+    <div class="container">
+
+        <div class="directory-layout">
+
+            <!-- SIDEBAR -->
+
+            <aside class="sidebar">
+
+                <div class="sidebar-title">
+                    <h2>Categories</h2>
+                </div>
+
+                <div class="category-list">
+
+                    <button class="category-btn active" data-category="all">
+                        <span>✨</span>
+                        All AI Tools
+                        <small>12</small>
+                    </button>
+
+                    <button class="category-btn" data-category="writing">
+                        <span>✍️</span>
+                        AI Writing
+                        <small>2</small>
+                    </button>
+
+                    <button class="category-btn" data-category="image">
+                        <span>🎨</span>
+                        AI Image
+                        <small>2</small>
+                    </button>
+
+                    <button class="category-btn" data-category="video">
+                        <span>🎬</span>
+                        AI Video
+                        <small>1</small>
+                    </button>
+
+                    <button class="category-btn" data-category="audio">
+                        <span>🎧</span>
+                        AI Audio
+                        <small>1</small>
+                    </button>
+
+                    <button class="category-btn" data-category="coding">
+                        <span>💻</span>
+                        AI Coding
+                        <small>1</small>
+                    </button>
+
+                    <button class="category-btn" data-category="seo">
+                        <span>📈</span>
+                        AI SEO
+                        <small>2</small>
+                    </button>
+
+                    <button class="category-btn" data-category="productivity">
+                        <span>⚡</span>
+                        Productivity
+                        <small>1</small>
+                    </button>
+
+                    <button class="category-btn" data-category="marketing">
+                        <span>📣</span>
+                        Marketing
+                        <small>2</small>
+                    </button>
+
+                </div>
+
+            </aside>
+
+
+            <!-- TOOLS AREA -->
+
+            <div class="tools-area">
+
+                <div class="tools-toolbar">
+
+                    <div>
+                        <h2>AI Tools</h2>
+
+                        <p>
+                            Showing <strong id="toolCount">12</strong> tools
+                        </p>
+                    </div>
+
+                    <select id="sortTools">
+                        <option value="default">Sort: Featured</option>
+                        <option value="name">Name A–Z</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+
+                </div>
+
+
+                <!-- TOOL GRID -->
+
+                <div class="tool-grid" id="toolGrid">
+
+
+                    <!-- CHATGPT -->
+
+                    <article
+                        class="tool-card"
+                        data-name="ChatGPT"
+                        data-category="writing"
+                        data-rating="4.9"
+                    >
+
+                        <div class="tool-card-top">
+
+                            <div class="tool-logo dark">
+                                G
+                            </div>
+
+                            <span class="tool-category">
+                                AI Writing
+                            </span>
+
+                        </div>
+
+                        <h3>ChatGPT</h3>
+
+                        <p>
+                            AI assistant for writing, research, brainstorming,
+                            coding and everyday tasks.
+                        </p>
+
+                        <div class="tool-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>AI Assistant</span>
+
+                        </div>
+
+                        <a href="./chatgpt/" class="tool-link">
+                            View Tool →
+                        </a>
+
+                    </article>
+
+
+                    <!-- CLAUDE -->
+
+                    <article
+                        class="tool-card"
+                        data-name="Claude"
+                        data-category="writing"
+                        data-rating="4.8"
+                    >
+
+                        <div class="tool-card-top">
+
+                            <div class="tool-logo purple">
+                                C
+                            </div>
+
+                            <span class="tool-category">
+                                AI Writing
+                            </span>
+
+                        </div>
+
+                        <h3>Claude</h3>
+
+                        <p>
+                            AI assistant for writing, analysis, coding and
+                            handling complex tasks.
+                        </p>
+
+                        <div class="tool-meta">
+                            <span>⭐ 4.8</span>
+                            <span>AI Assistant</span>
+                        </div>
+
+                        <a href="./claude/" class="tool-link">
+                            View Tool →
+                        </a>
+
+                    </article>
+
+
+                    <!-- MIDJOURNEY -->
+
+                    <article
+                        class="tool-card"
+                        data-name="Midjourney"
+                        data-category="image"
+                        data-rating="4.8"
+                    >
+
+                        <div class="tool-card-top">
+
+                            <div class="tool-logo pink">
+                                M
+                            </div>
+
+                            <span class="tool-category">
+                                AI Image
+                            </span>
+
+                        </div>
+
+                        <h3>Midjourney</h3>
+
+                        <p>
+                            Create artistic and highly detailed images
+                            from natural language prompts.
+                        </p>
+
+                        <div class="tool-meta">
+                            <span>⭐ 4.8</span>
+                            <span>Image Generator</span>
+                        </div>
+
+                        <a href="./midjourney/" class="tool-link">
+                            View Tool →
+                        </a>
+
+                    </article>
+
+
+                    <!-- GEMINI -->
+
+                    <article
+                        class="tool-card"
+                        data-name="Google Gemini"
+                        data-category="productivity"
+                        data-rating="4.7"
+                    >
+
+                        <div class="tool-card-top">
+
+                            <div class="tool-logo blue">
+                                G
+                            </div>
+
+                            <span class="tool-category">
+                                Productivity
+                            </span>
+
+                        </div>
+
+                        <h3>Google Gemini</h3>
+
+                        <p>
+                            Google's AI assistant for research, writing,
+                            brainstorming and productivity.
+                        </p>
+
+                        <div class="tool-meta">
+                            <span>⭐ 4.7</span>
+                            <span>AI Assistant</span>
+                        </div>
+
+                        <a href="./gemini/" class="tool-link">
+                            View Tool →
+                        </a>
+
+                    </article>
+
+
+                    <!-- CANVA -->
+
+                    <article
+                        class="tool-card"
+                        data-name="Canva AI"
+                        data-category="image"
+                        data-rating="4.7"
+                    >
+
+                        <div class="tool-card-top">
+
+                            <div class="tool-logo cyan">
+                                C
+                            </div>
+
+                            <span class="tool-category">
+                                AI Image
+                            </span>
+
+                        </div>
+
+                        <h3>Canva AI</h3>
+
+                        <p>
+                            Create designs, presentations and visual
+                            content using AI-powered features.
+                        </p>
+
+                        <div class="tool-meta">
+                            <span>⭐ 4.7</span>
+                            <span>Design</span>
+                        </div>
+
+                        <a href="./canva-ai/" class="tool-link">
+                            View Tool →
+                        </a>
+
+                    </article>
+
+
+                    <!-- RUNWAY -->
+
+                    <article
+                        class="tool-card"
+                        data-name="Runway"
+                        data-category="video"
+                        data-rating="4.7"
+                    >
+
+                        <div class="tool-card-top">
+
+                            <div class="tool-logo orange">
+                                R
+                            </div>
+
+                            <span class="tool-category">
+                                AI Video
+                            </span>
+
+                        </div>
+
+                        <h3>Runway</h3>
+
+                        <p>
+                            AI-powered tools for creating and editing
+                            professional videos.
+                        </p>
+
+                        <div class="tool-meta">
+                            <span>⭐ 4.7</span>
+                            <span>Video Generator</span>
+                        </div>
+
+                        <a href="./runway/" class="tool-link">
+                            View Tool →
+                        </a>
+
+                    </article>
+
+
+                    <!-- ELEVENLABS -->
+
+                    <article
+                        class="tool-card"
+                        data-name="ElevenLabs"
+                        data-category="audio"
+                        data-rating="4.8"
+                    >
+
+                        <div class="tool-card-top">
+
+                            <div class="tool-logo red">
+                                E
+                            </div>
+
+                            <span class="tool-category">
+                                AI Audio
+                            </span>
+
+                        </div>
+
+                        <h3>ElevenLabs</h3>
+
+                        <p>
+                            AI voice generation and audio tools for
+                            realistic speech and voiceovers.
+                        </p>
+
+                        <div class="tool-meta">
+                            <span>⭐ 4.8</span>
+                            <span>Voice AI</span>
+                        </div>
+
+                        <a href="./elevenlabs/" class="tool-link">
+                            View Tool →
+                        </a>
+
+                    </article>
+
+
+                    <!-- GITHUB COPILOT -->
+
+                    <article
+                        class="tool-card"
+                        data-name="GitHub Copilot"
+                        data-category="coding"
+                        data-rating="4.7"
+                    >
+
+                        <div class="tool-card-top">
+
+                            <div class="tool-logo black">
+                                &lt;/&gt;
+                            </div>
+
+                            <span class="tool-category">
+                                AI Coding
+                            </span>
+
+                        </div>
+
+                        <h3>GitHub Copilot</h3>
+
+                        <p>
+                            AI coding assistant that helps developers
+                            write and understand code faster.
+                        </p>
+
+                        <div class="tool-meta">
+                            <span>⭐ 4.7</span>
+                            <span>Coding Assistant</span>
+                        </div>
+
+                        <a href="./github-copilot/" class="tool-link">
+                            View Tool →
+                        </a>
+
+                    </article>
+
+
+                    <!-- SURFER SEO -->
+
+                    <article
+                        class="tool-card"
+                        data-name="Surfer SEO"
+                        data-category="seo"
+                        data-rating="4.6"
+                    >
+
+                        <div class="tool-card-top">
+
+                            <div class="tool-logo green">
+                                S
+                            </div>
+
+                            <span class="tool-category">
+                                AI SEO
+                            </span>
+
+                        </div>
+
+                        <h3>Surfer SEO</h3>
+
+                        <p>
+                            SEO content and optimization platform designed
+                            to improve search visibility.
+                        </p>
+
+                        <div class="tool-meta">
+                            <span>⭐ 4.6</span>
+                            <span>SEO</span>
+                        </div>
+
+                        <a href="./surfer-seo/" class="tool-link">
+                            View Tool →
+                        </a>
+
+                    </article>
+
+
+                    <!-- JASPER -->
+
+                    <article
+                        class="tool-card"
+                        data-name="Jasper"
+                        data-category="marketing"
+                        data-rating="4.6"
+                    >
+
+                        <div class="tool-card-top">
+
+                            <div class="tool-logo violet">
+                                J
+                            </div>
+
+                            <span class="tool-category">
+                                Marketing
+                            </span>
+
+                        </div>
+
+                        <h3>Jasper</h3>
+
+                        <p>
+                            AI marketing platform for creating content,
+                            campaigns and brand-focused copy.
+                        </p>
+
+                        <div class="tool-meta">
+                            <span>⭐ 4.6</span>
+                            <span>Marketing AI</span>
+                        </div>
+
+                        <a href="./jasper/" class="tool-link">
+                            View Tool →
+                        </a>
+
+                    </article>
+
+
+                    <!-- SEMRUSH -->
+
+                    <article
+                        class="tool-card"
+                        data-name="Semrush"
+                        data-category="seo"
+                        data-rating="4.6"
+                    >
+
+                        <div class="tool-card-top">
+
+                            <div class="tool-logo orange-red">
+                                S
+                            </div>
+
+                            <span class="tool-category">
+                                AI SEO
+                            </span>
+
+                        </div>
+
+                        <h3>Semrush</h3>
+
+                        <p>
+                            Digital marketing and SEO platform with
+                            AI-powered content and optimization features.
+                        </p>
+
+                        <div class="tool-meta">
+                            <span>⭐ 4.6</span>
+                            <span>SEO & Marketing</span>
+                        </div>
+
+                        <a href="./semrush/" class="tool-link">
+                            View Tool →
+                        </a>
+
+                    </article>
+
+
+                    <!-- COPY.AI -->
+
+                    <article
+                        class="tool-card"
+                        data-name="Copy.ai"
+                        data-category="marketing"
+                        data-rating="4.5"
+                    >
+
+                        <div class="tool-card-top">
+
+                            <div class="tool-logo yellow">
+                                C
+                            </div>
+
+                            <span class="tool-category">
+                                Marketing
+                            </span>
+
+                        </div>
+
+                        <h3>Copy.ai</h3>
+
+                        <p>
+                            AI-powered platform for marketing workflows,
+                            sales content and copywriting.
+                        </p>
+
+                        <div class="tool-meta">
+                            <span>⭐ 4.5</span>
+                            <span>Copywriting</span>
+                        </div>
+
+                        <a href="./copy-ai/" class="tool-link">
+                            View Tool →
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- NO RESULTS -->
+
+                <div class="no-results" id="noResults">
+
+                    <div>🔎</div>
+
+                    <h3>No AI tools found</h3>
+
+                    <p>
+                        Try another search or select a different category.
+                    </p>
+
+                    <button id="resetFilters">
+                        Reset Filters
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY SECTION ================= -->
+
+<section class="why-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                WHY AIPROMPTENG?
+            </span>
+
+            <h2>
+                Find the Right AI Tool Faster
+            </h2>
+
+            <p>
+                We organize AI tools into useful categories so you can
+                quickly discover tools for your specific needs.
+            </p>
+
+        </div>
+
+
+        <div class="benefit-grid">
+
+            <div class="benefit-card">
+                <div>🔍</div>
+                <h3>Easy Discovery</h3>
+                <p>
+                    Search and browse AI tools without wasting time.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <div>📂</div>
+                <h3>Useful Categories</h3>
+                <p>
+                    Find tools organized by their main purpose.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <div>⭐</div>
+                <h3>Tool Reviews</h3>
+                <p>
+                    Explore detailed reviews, features and comparisons.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <div>🚀</div>
+                <h3>Updated Resources</h3>
+                <p>
+                    Discover new AI tools and emerging AI solutions.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="../" class="logo">
+                    AI<span>Prompt</span>Eng
+                </a>
+
+                <p>
+                    Discover AI tools, prompts, guides, reviews and
+                    useful resources to work smarter with artificial intelligence.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>AI Tools</h3>
+
+                <a href="./">AI Tools Directory</a>
+                <a href="../ai-tools/writing/">AI Writing</a>
+                <a href="../ai-tools/image/">AI Image</a>
+                <a href="../ai-tools/video/">AI Video</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Resources</h3>
+
+                <a href="../prompts/">AI Prompts</a>
+                <a href="../guides/">AI Guides</a>
+                <a href="../reviews/">Reviews</a>
+                <a href="../comparisons/">Comparisons</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Company</h3>
+
+                <a href="../about/">About</a>
+                <a href="../contact/">Contact</a>
+                <a href="../privacy-policy/">Privacy Policy</a>
+                <a href="../terms/">Terms</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 AIPromptEng. All rights reserved.
+            </p>
+
+            <p>
+                AI Tools • Prompts • Guides • Reviews
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
