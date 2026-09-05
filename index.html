@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
@@ -8,10 +9,10 @@
     <title>AIPromptEng – AI Tools, Prompts, Reviews & Guides</title>
 
     <meta name="description"
-        content="Discover the best AI tools, ChatGPT prompts, AI guides, reviews, comparisons and latest AI trends at AIPromptEng.">
+        content="Discover the best AI tools, AI prompts, guides, reviews, comparisons and latest AI trends at AIPromptEng. Explore AI writing, image, video, coding, SEO, marketing and productivity tools.">
 
     <meta name="keywords"
-        content="AI tools, AI prompts, ChatGPT prompts, AI reviews, AI guides, AI tools directory">
+        content="AI tools, AI prompts, ChatGPT prompts, AI reviews, AI guides, AI tools directory, AI writing tools, AI image tools, AI video tools, AI coding tools">
 
     <meta name="author" content="AIPromptEng">
 
@@ -19,6 +20,7 @@
 
     <link rel="canonical" href="https://aiprompteng.com/">
 
+    <!-- Open Graph -->
     <meta property="og:title"
         content="AIPromptEng – AI Tools, Prompts, Reviews & Guides">
 
@@ -27,45 +29,63 @@
 
     <meta property="og:type" content="website">
 
+    <meta property="og:url" content="https://aiprompteng.com/">
+
+    <meta property="og:site_name" content="AIPromptEng">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="site-header">
 
     <div class="container header-inner">
 
-        <a href="/" class="logo">
+        <a href="/" class="logo" aria-label="AIPromptEng Home">
             AI<span>Prompt</span>Eng
         </a>
 
         <nav class="main-nav" id="mainNav">
 
-            <a href="#tools">AI Tools</a>
-            <a href="#prompts">Prompts</a>
-            <a href="#guides">Guides</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#comparisons">Comparisons</a>
-            <a href="#news">News</a>
+            <a href="/ai-tools/">AI Tools</a>
+
+            <a href="/prompts/">Prompts</a>
+
+            <a href="/guides/">Guides</a>
+
+            <a href="/reviews/">Reviews</a>
+
+            <a href="/comparisons/">Comparisons</a>
+
+            <a href="/news/">News</a>
 
         </nav>
 
         <div class="header-actions">
 
-            <button class="search-toggle" id="searchToggle">
+            <button
+                class="search-toggle"
+                id="searchToggle"
+                aria-label="Open Search">
                 🔍
             </button>
 
-            <button class="menu-toggle" id="menuToggle">
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open Menu">
                 ☰
             </button>
 
         </div>
 
     </div>
+
 
     <!-- SEARCH -->
 
@@ -77,7 +97,7 @@
                 type="search"
                 id="siteSearch"
                 placeholder="Search AI tools, prompts, guides..."
-            >
+                aria-label="Search AIPromptEng">
 
             <button id="searchButton">
                 Search
@@ -90,9 +110,16 @@
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
 <main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
@@ -117,15 +144,16 @@
 
             <div class="hero-buttons">
 
-                <a href="#tools" class="btn btn-primary">
+                <a href="/ai-tools/" class="btn btn-primary">
                     Explore AI Tools →
                 </a>
 
-                <a href="#prompts" class="btn btn-secondary">
+                <a href="/prompts/" class="btn btn-secondary">
                     Browse Prompts
                 </a>
 
             </div>
+
 
             <div class="hero-stats">
 
@@ -148,6 +176,8 @@
 
         </div>
 
+
+        <!-- HERO VISUAL -->
 
         <div class="hero-visual">
 
@@ -179,24 +209,24 @@
 
                 </div>
 
-                <button>
+                <a href="/prompts/" class="ai-card-button">
                     Generate Prompt →
-                </button>
+                </a>
 
             </div>
 
 
-            <div class="floating-card card-one">
+            <a href="/ai-tools/" class="floating-card card-one">
                 🤖 AI Tools
-            </div>
+            </a>
 
-            <div class="floating-card card-two">
+            <a href="/prompts/" class="floating-card card-two">
                 ✨ Prompts
-            </div>
+            </a>
 
-            <div class="floating-card card-three">
+            <a href="/guides/" class="floating-card card-three">
                 📚 Guides
-            </div>
+            </a>
 
         </div>
 
@@ -205,7 +235,9 @@
 </section>
 
 
-<!-- ================= CATEGORIES ================= -->
+<!-- =====================================================
+     AI CATEGORIES
+===================================================== -->
 
 <section class="categories">
 
@@ -214,15 +246,19 @@
         <div class="section-heading">
 
             <div>
-                <span class="section-label">EXPLORE</span>
+
+                <span class="section-label">
+                    EXPLORE
+                </span>
 
                 <h2>
                     Explore AI Categories
                 </h2>
+
             </div>
 
             <p>
-                Find AI resources based on what you want to accomplish.
+                Find AI tools based on what you want to accomplish.
             </p>
 
         </div>
@@ -230,52 +266,242 @@
 
         <div class="category-grid">
 
-            <a href="/ai-tools/writing/" class="category-card">
-                <div class="category-icon">✍️</div>
-                <h3>AI Writing</h3>
-                <p>Writing, copywriting and content tools.</p>
+
+            <!-- AI WRITING -->
+
+            <a href="/ai-tools/ai-writing/" class="category-card">
+
+                <div class="category-icon">
+                    ✍️
+                </div>
+
+                <h3>
+                    AI Writing
+                </h3>
+
+                <p>
+                    Writing, copywriting and content AI tools.
+                </p>
+
             </a>
 
-            <a href="/ai-tools/image/" class="category-card">
-                <div class="category-icon">🎨</div>
-                <h3>AI Image</h3>
-                <p>Create stunning images with AI.</p>
+
+            <!-- AI IMAGE -->
+
+            <a href="/ai-tools/ai-image/" class="category-card">
+
+                <div class="category-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    AI Image
+                </h3>
+
+                <p>
+                    Create stunning images and visuals with AI.
+                </p>
+
             </a>
 
-            <a href="/ai-tools/video/" class="category-card">
-                <div class="category-icon">🎬</div>
-                <h3>AI Video</h3>
-                <p>Generate and edit videos with AI.</p>
+
+            <!-- AI VIDEO -->
+
+            <a href="/ai-tools/ai-video/" class="category-card">
+
+                <div class="category-icon">
+                    🎬
+                </div>
+
+                <h3>
+                    AI Video
+                </h3>
+
+                <p>
+                    Generate and edit videos with AI.
+                </p>
+
             </a>
 
-            <a href="/ai-tools/audio/" class="category-card">
-                <div class="category-icon">🎧</div>
-                <h3>AI Audio</h3>
-                <p>Voice, music and audio AI tools.</p>
+
+            <!-- AI AUDIO -->
+
+            <a href="/ai-tools/ai-audio/" class="category-card">
+
+                <div class="category-icon">
+                    🎧
+                </div>
+
+                <h3>
+                    AI Audio
+                </h3>
+
+                <p>
+                    AI voice, music, speech and audio tools.
+                </p>
+
             </a>
 
-            <a href="/ai-tools/coding/" class="category-card">
-                <div class="category-icon">💻</div>
-                <h3>AI Coding</h3>
-                <p>AI assistants for developers.</p>
+
+            <!-- AI CODING -->
+
+            <a href="/ai-tools/ai-coding/" class="category-card">
+
+                <div class="category-icon">
+                    💻
+                </div>
+
+                <h3>
+                    AI Coding
+                </h3>
+
+                <p>
+                    AI coding assistants and developer tools.
+                </p>
+
             </a>
 
-            <a href="/ai-tools/seo/" class="category-card">
-                <div class="category-icon">📈</div>
-                <h3>AI SEO</h3>
-                <p>AI tools for SEO and marketing.</p>
+
+            <!-- AI SEO -->
+
+            <a href="/ai-tools/ai-seo/" class="category-card">
+
+                <div class="category-icon">
+                    📈
+                </div>
+
+                <h3>
+                    AI SEO
+                </h3>
+
+                <p>
+                    AI tools for SEO, content and search visibility.
+                </p>
+
             </a>
 
-            <a href="/ai-tools/productivity/" class="category-card">
-                <div class="category-icon">⚡</div>
-                <h3>Productivity</h3>
-                <p>Work faster with AI-powered tools.</p>
+
+            <!-- AI MARKETING -->
+
+            <a href="/ai-tools/ai-marketing/" class="category-card">
+
+                <div class="category-icon">
+                    📣
+                </div>
+
+                <h3>
+                    AI Marketing
+                </h3>
+
+                <p>
+                    AI tools for marketing, ads and social media.
+                </p>
+
             </a>
 
-            <a href="/ai-tools/marketing/" class="category-card">
-                <div class="category-icon">📣</div>
-                <h3>AI Marketing</h3>
-                <p>Marketing tools powered by AI.</p>
+
+            <!-- AI PRODUCTIVITY -->
+
+            <a href="/ai-tools/ai-productivity/" class="category-card">
+
+                <div class="category-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    AI Productivity
+                </h3>
+
+                <p>
+                    Work faster with AI productivity tools.
+                </p>
+
+            </a>
+
+
+            <!-- AI RESEARCH -->
+
+            <a href="/ai-tools/ai-research/" class="category-card">
+
+                <div class="category-icon">
+                    🔬
+                </div>
+
+                <h3>
+                    AI Research
+                </h3>
+
+                <p>
+                    Research, literature and academic AI tools.
+                </p>
+
+            </a>
+
+
+            <!-- AI CHATBOTS -->
+
+            <a href="/ai-tools/ai-chatbots/" class="category-card">
+
+                <div class="category-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI Chatbots
+                </h3>
+
+                <p>
+                    ChatGPT alternatives and AI assistants.
+                </p>
+
+            </a>
+
+
+            <!-- AI DESIGN -->
+
+            <a href="/ai-tools/ai-design/" class="category-card">
+
+                <div class="category-icon">
+                    🖌️
+                </div>
+
+                <h3>
+                    AI Design
+                </h3>
+
+                <p>
+                    Graphic design, UI/UX and branding AI tools.
+                </p>
+
+            </a>
+
+
+            <!-- AI BUSINESS -->
+
+            <a href="/ai-tools/ai-business/" class="category-card">
+
+                <div class="category-icon">
+                    💼
+                </div>
+
+                <h3>
+                    AI Business
+                </h3>
+
+                <p>
+                    AI tools for business, sales and automation.
+                </p>
+
+            </a>
+
+
+        </div>
+
+
+        <div class="categories-more">
+
+            <a href="/ai-tools/categories/" class="view-all">
+                View All AI Categories →
             </a>
 
         </div>
@@ -285,7 +511,9 @@
 </section>
 
 
-<!-- ================= AI TOOLS ================= -->
+<!-- =====================================================
+     AI TOOLS
+===================================================== -->
 
 <section class="content-section" id="tools">
 
@@ -315,6 +543,8 @@
         <div class="tool-grid">
 
 
+            <!-- CHATGPT -->
+
             <article class="tool-card">
 
                 <div class="tool-top">
@@ -324,12 +554,14 @@
                     </div>
 
                     <span class="tool-tag">
-                        Writing
+                        AI Chatbot
                     </span>
 
                 </div>
 
-                <h3>ChatGPT</h3>
+                <h3>
+                    ChatGPT
+                </h3>
 
                 <p>
                     AI assistant for writing, research, coding,
@@ -338,7 +570,9 @@
 
                 <div class="tool-bottom">
 
-                    <span>⭐ 4.9</span>
+                    <span>
+                        ⭐ 4.9
+                    </span>
 
                     <a href="/ai-tools/chatgpt/">
                         View Tool →
@@ -349,6 +583,8 @@
             </article>
 
 
+            <!-- CLAUDE -->
+
             <article class="tool-card">
 
                 <div class="tool-top">
@@ -358,12 +594,14 @@
                     </div>
 
                     <span class="tool-tag">
-                        Assistant
+                        AI Assistant
                     </span>
 
                 </div>
 
-                <h3>Claude</h3>
+                <h3>
+                    Claude
+                </h3>
 
                 <p>
                     AI assistant designed for writing,
@@ -372,7 +610,9 @@
 
                 <div class="tool-bottom">
 
-                    <span>⭐ 4.8</span>
+                    <span>
+                        ⭐ 4.8
+                    </span>
 
                     <a href="/ai-tools/claude/">
                         View Tool →
@@ -383,6 +623,8 @@
             </article>
 
 
+            <!-- MIDJOURNEY -->
+
             <article class="tool-card">
 
                 <div class="tool-top">
@@ -392,12 +634,14 @@
                     </div>
 
                     <span class="tool-tag">
-                        Image
+                        AI Image
                     </span>
 
                 </div>
 
-                <h3>Midjourney</h3>
+                <h3>
+                    Midjourney
+                </h3>
 
                 <p>
                     Create creative and high-quality AI-generated
@@ -406,7 +650,9 @@
 
                 <div class="tool-bottom">
 
-                    <span>⭐ 4.8</span>
+                    <span>
+                        ⭐ 4.8
+                    </span>
 
                     <a href="/ai-tools/midjourney/">
                         View Tool →
@@ -416,6 +662,8 @@
 
             </article>
 
+
+            <!-- GEMINI -->
 
             <article class="tool-card">
 
@@ -431,7 +679,9 @@
 
                 </div>
 
-                <h3>Google Gemini</h3>
+                <h3>
+                    Google Gemini
+                </h3>
 
                 <p>
                     Google's AI assistant for research,
@@ -440,7 +690,9 @@
 
                 <div class="tool-bottom">
 
-                    <span>⭐ 4.7</span>
+                    <span>
+                        ⭐ 4.7
+                    </span>
 
                     <a href="/ai-tools/gemini/">
                         View Tool →
@@ -450,6 +702,7 @@
 
             </article>
 
+
         </div>
 
     </div>
@@ -457,7 +710,9 @@
 </section>
 
 
-<!-- ================= PROMPTS ================= -->
+<!-- =====================================================
+     PROMPTS
+===================================================== -->
 
 <section class="prompts-section" id="prompts">
 
@@ -504,9 +759,12 @@
 
                 <div class="prompt-actions">
 
-                    <button class="copy-btn"
-                        data-prompt="Act as an expert SEO content writer...">
+                    <button
+                        class="copy-btn"
+                        data-prompt="Act as an expert SEO content writer. Create helpful, original and search-friendly content based on the provided topic and target keyword.">
+
                         📋 Copy Prompt
+
                     </button>
 
                     <a href="/prompts/seo-content-writer/">
@@ -535,9 +793,12 @@
 
                 <div class="prompt-actions">
 
-                    <button class="copy-btn"
-                        data-prompt="Act as a professional social media marketing expert...">
+                    <button
+                        class="copy-btn"
+                        data-prompt="Act as a professional social media marketing expert. Create engaging social media content, captions, hooks and campaign ideas for my target audience.">
+
                         📋 Copy Prompt
+
                     </button>
 
                     <a href="/prompts/social-media-marketing/">
@@ -566,9 +827,12 @@
 
                 <div class="prompt-actions">
 
-                    <button class="copy-btn"
-                        data-prompt="Act as a business strategist and generate profitable business ideas...">
+                    <button
+                        class="copy-btn"
+                        data-prompt="Act as a business strategist. Generate practical and profitable business ideas based on my skills, budget, location, target market and available resources.">
+
                         📋 Copy Prompt
+
                     </button>
 
                     <a href="/prompts/business-ideas/">
@@ -579,6 +843,7 @@
 
             </article>
 
+
         </div>
 
     </div>
@@ -586,7 +851,9 @@
 </section>
 
 
-<!-- ================= GUIDES ================= -->
+<!-- =====================================================
+     GUIDES
+===================================================== -->
 
 <section class="content-section" id="guides">
 
@@ -615,6 +882,7 @@
 
         <div class="article-grid">
 
+
             <article class="article-card">
 
                 <div class="article-image image-one">
@@ -623,7 +891,9 @@
 
                 <div class="article-content">
 
-                    <span>AI Guide</span>
+                    <span>
+                        AI Guide
+                    </span>
 
                     <h3>
                         How to Write Better AI Prompts
@@ -651,7 +921,9 @@
 
                 <div class="article-content">
 
-                    <span>AI Guide</span>
+                    <span>
+                        AI Guide
+                    </span>
 
                     <h3>
                         How to Use AI for SEO
@@ -679,7 +951,9 @@
 
                 <div class="article-content">
 
-                    <span>AI Guide</span>
+                    <span>
+                        AI Guide
+                    </span>
 
                     <h3>
                         Best AI Tools for Productivity
@@ -698,6 +972,7 @@
 
             </article>
 
+
         </div>
 
     </div>
@@ -705,7 +980,9 @@
 </section>
 
 
-<!-- ================= REVIEWS ================= -->
+<!-- =====================================================
+     REVIEWS
+===================================================== -->
 
 <section class="review-section" id="reviews">
 
@@ -734,11 +1011,19 @@
 
         <div class="review-grid">
 
+
             <article class="review-card">
 
                 <div class="review-score">
-                    <strong>4.9</strong>
-                    <span>★★★★★</span>
+
+                    <strong>
+                        4.9
+                    </strong>
+
+                    <span>
+                        ★★★★★
+                    </span>
+
                 </div>
 
                 <h3>
@@ -760,8 +1045,15 @@
             <article class="review-card">
 
                 <div class="review-score">
-                    <strong>4.8</strong>
-                    <span>★★★★★</span>
+
+                    <strong>
+                        4.8
+                    </strong>
+
+                    <span>
+                        ★★★★★
+                    </span>
+
                 </div>
 
                 <h3>
@@ -779,6 +1071,7 @@
 
             </article>
 
+
         </div>
 
     </div>
@@ -786,7 +1079,9 @@
 </section>
 
 
-<!-- ================= COMPARISONS ================= -->
+<!-- =====================================================
+     COMPARISONS
+===================================================== -->
 
 <section class="content-section" id="comparisons">
 
@@ -815,13 +1110,25 @@
 
         <div class="comparison-grid">
 
-            <a href="/comparisons/chatgpt-vs-claude/"
-               class="comparison-card">
+
+            <a
+                href="/comparisons/chatgpt-vs-claude/"
+                class="comparison-card">
 
                 <div>
-                    <strong>ChatGPT</strong>
-                    <span>VS</span>
-                    <strong>Claude</strong>
+
+                    <strong>
+                        ChatGPT
+                    </strong>
+
+                    <span>
+                        VS
+                    </span>
+
+                    <strong>
+                        Claude
+                    </strong>
+
                 </div>
 
                 <p>
@@ -835,13 +1142,24 @@
             </a>
 
 
-            <a href="/comparisons/chatgpt-vs-gemini/"
-               class="comparison-card">
+            <a
+                href="/comparisons/chatgpt-vs-gemini/"
+                class="comparison-card">
 
                 <div>
-                    <strong>ChatGPT</strong>
-                    <span>VS</span>
-                    <strong>Gemini</strong>
+
+                    <strong>
+                        ChatGPT
+                    </strong>
+
+                    <span>
+                        VS
+                    </span>
+
+                    <strong>
+                        Gemini
+                    </strong>
+
                 </div>
 
                 <p>
@@ -855,13 +1173,24 @@
             </a>
 
 
-            <a href="/comparisons/midjourney-vs-leonardo/"
-               class="comparison-card">
+            <a
+                href="/comparisons/midjourney-vs-leonardo/"
+                class="comparison-card">
 
                 <div>
-                    <strong>Midjourney</strong>
-                    <span>VS</span>
-                    <strong>Leonardo AI</strong>
+
+                    <strong>
+                        Midjourney
+                    </strong>
+
+                    <span>
+                        VS
+                    </span>
+
+                    <strong>
+                        Leonardo AI
+                    </strong>
+
                 </div>
 
                 <p>
@@ -874,6 +1203,7 @@
 
             </a>
 
+
         </div>
 
     </div>
@@ -881,7 +1211,9 @@
 </section>
 
 
-<!-- ================= NEWSLETTER ================= -->
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
 
 <section class="newsletter">
 
@@ -906,13 +1238,14 @@
 
             </div>
 
+
             <form id="newsletterForm">
 
                 <input
                     type="email"
                     placeholder="Enter your email address"
-                    required
-                >
+                    aria-label="Email address"
+                    required>
 
                 <button type="submit">
                     Subscribe →
@@ -927,7 +1260,9 @@
 </section>
 
 
-<!-- ================= NEWS ================= -->
+<!-- =====================================================
+     NEWS
+===================================================== -->
 
 <section class="content-section" id="news">
 
@@ -955,6 +1290,7 @@
 
 
         <div class="news-list">
+
 
             <article class="news-item">
 
@@ -1007,22 +1343,29 @@
 
             </article>
 
+
         </div>
 
     </div>
 
 </section>
 
+
 </main>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="site-footer">
 
     <div class="container">
 
         <div class="footer-grid">
+
+
+            <!-- BRAND -->
 
             <div class="footer-brand">
 
@@ -1038,43 +1381,150 @@
             </div>
 
 
+            <!-- AI TOOLS -->
+
             <div>
 
-                <h3>AI Tools</h3>
+                <h3>
+                    AI Tools
+                </h3>
 
-                <a href="/ai-tools/writing/">AI Writing</a>
-                <a href="/ai-tools/image/">AI Image</a>
-                <a href="/ai-tools/video/">AI Video</a>
-                <a href="/ai-tools/coding/">AI Coding</a>
+                <a href="/ai-tools/">
+                    All AI Tools
+                </a>
+
+                <a href="/ai-tools/ai-writing/">
+                    AI Writing
+                </a>
+
+                <a href="/ai-tools/ai-image/">
+                    AI Image
+                </a>
+
+                <a href="/ai-tools/ai-video/">
+                    AI Video
+                </a>
+
+                <a href="/ai-tools/ai-audio/">
+                    AI Audio
+                </a>
+
+                <a href="/ai-tools/ai-coding/">
+                    AI Coding
+                </a>
+
+                <a href="/ai-tools/ai-seo/">
+                    AI SEO
+                </a>
+
+                <a href="/ai-tools/categories/">
+                    All Categories →
+                </a>
 
             </div>
 
 
+            <!-- MORE AI TOOLS -->
+
             <div>
 
-                <h3>Resources</h3>
+                <h3>
+                    AI Categories
+                </h3>
 
-                <a href="/prompts/">AI Prompts</a>
-                <a href="/guides/">AI Guides</a>
-                <a href="/reviews/">Reviews</a>
-                <a href="/comparisons/">Comparisons</a>
+                <a href="/ai-tools/ai-marketing/">
+                    AI Marketing
+                </a>
+
+                <a href="/ai-tools/ai-productivity/">
+                    AI Productivity
+                </a>
+
+                <a href="/ai-tools/ai-research/">
+                    AI Research
+                </a>
+
+                <a href="/ai-tools/ai-chatbots/">
+                    AI Chatbots
+                </a>
+
+                <a href="/ai-tools/ai-design/">
+                    AI Design
+                </a>
+
+                <a href="/ai-tools/ai-business/">
+                    AI Business
+                </a>
 
             </div>
 
 
+            <!-- RESOURCES -->
+
             <div>
 
-                <h3>Company</h3>
+                <h3>
+                    Resources
+                </h3>
 
-                <a href="/about/">About</a>
-                <a href="/contact/">Contact</a>
-                <a href="/privacy-policy/">Privacy Policy</a>
-                <a href="/terms/">Terms</a>
+                <a href="/prompts/">
+                    AI Prompts
+                </a>
+
+                <a href="/guides/">
+                    AI Guides
+                </a>
+
+                <a href="/reviews/">
+                    AI Reviews
+                </a>
+
+                <a href="/comparisons/">
+                    AI Comparisons
+                </a>
+
+                <a href="/news/">
+                    AI News
+                </a>
+
+                <a href="/ai-tools/chatgpt/">
+                    ChatGPT
+                </a>
 
             </div>
+
+
+            <!-- COMPANY -->
+
+            <div>
+
+                <h3>
+                    Company
+                </h3>
+
+                <a href="/about/">
+                    About AIPromptEng
+                </a>
+
+                <a href="/contact/">
+                    Contact
+                </a>
+
+                <a href="/privacy-policy/">
+                    Privacy Policy
+                </a>
+
+                <a href="/terms/">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
 
         </div>
 
+
+        <!-- FOOTER BOTTOM -->
 
         <div class="footer-bottom">
 
@@ -1083,7 +1533,7 @@
             </p>
 
             <p>
-                AI Tools • Prompts • Guides • Reviews
+                AI Tools • Prompts • Guides • Reviews • Comparisons
             </p>
 
         </div>
@@ -1093,7 +1543,12 @@
 </footer>
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
