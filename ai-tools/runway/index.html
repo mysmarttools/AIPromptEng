@@ -1,730 +1,238 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =========================================
+   AIPROMPTENG - RUNWAY AI PAGE JAVASCRIPT
+========================================= */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+document.addEventListener("DOMContentLoaded", function () {
 
-    <title>Runway AI Review, Features & Pricing | AI Video Generator – AIPromptEng</title>
+    /* =====================================
+       MOBILE MENU
+    ===================================== */
 
-    <meta name="description"
-        content="Explore Runway AI, a creative AI platform for generating and editing videos with artificial intelligence. Learn about Runway features, use cases, pros, cons and more.">
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
 
-    <meta name="keywords"
-        content="Runway AI, Runway, Runway AI video generator, Runway review, Runway features, Runway pricing, AI video generator, text to video AI, AI video editing">
+    if (menuToggle && mainNav) {
 
-    <link rel="canonical" href="https://aiprompteng.vercel.app/ai-tools/runway/">
+        menuToggle.addEventListener("click", function (event) {
 
-    <meta property="og:title" content="Runway AI Review, Features & Pricing | AIPromptEng">
-    <meta property="og:description"
-        content="Learn about Runway AI video generation, creative tools, use cases and features.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aiprompteng.vercel.app/ai-tools/runway/">
+            event.stopPropagation();
 
-    <link rel="stylesheet" href="style.css">
-</head>
+            mainNav.classList.toggle("active");
 
-<body>
+            const isOpen =
+                mainNav.classList.contains("active");
 
-<header class="site-header">
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
 
-    <div class="container header-inner">
+            menuToggle.innerHTML =
+                isOpen ? "✕" : "☰";
+        });
 
-        <a href="/" class="logo">
-            <span>AI</span>PromptEng
-        </a>
 
-        <nav class="desktop-nav">
-            <a href="/">Home</a>
-            <a href="/ai-tools/">AI Tools</a>
-            <a href="/prompts/">Prompts</a>
-            <a href="/guides/">Guides</a>
-            <a href="/reviews/">Reviews</a>
-            <a href="/comparisons/">Comparisons</a>
-        </nav>
+        document.addEventListener("click", function (event) {
 
-        <button class="menu-toggle" aria-label="Open Menu">☰</button>
+            if (
+                mainNav.classList.contains("active") &&
+                !mainNav.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
 
-    </div>
+                mainNav.classList.remove("active");
 
-    <nav class="mobile-nav">
-        <a href="/">Home</a>
-        <a href="/ai-tools/">AI Tools</a>
-        <a href="/prompts/">Prompts</a>
-        <a href="/guides/">Guides</a>
-        <a href="/reviews/">Reviews</a>
-        <a href="/comparisons/">Comparisons</a>
-    </nav>
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-</header>
+                menuToggle.innerHTML = "☰";
+            }
 
+        });
 
-<main>
 
-<section class="breadcrumb-section">
+        const navLinks =
+            mainNav.querySelectorAll("a");
 
-    <div class="container">
+        navLinks.forEach(function (link) {
 
-        <div class="breadcrumb">
+            link.addEventListener("click", function () {
 
-            <a href="/">Home</a>
-            <span>›</span>
-            <a href="/ai-tools/">AI Tools</a>
-            <span>›</span>
-            <span>Runway AI</span>
+                mainNav.classList.remove("active");
 
-        </div>
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-    </div>
+                menuToggle.innerHTML = "☰";
+            });
 
-</section>
+        });
+    }
 
 
-<section class="hero-section">
+    /* =====================================
+       FAQ ACCORDION
+    ===================================== */
 
-    <div class="container hero-grid">
+    const faqItems =
+        document.querySelectorAll(".faq-item");
 
-        <div class="hero-content">
+    faqItems.forEach(function (item) {
 
-            <div class="tool-label">
-                🎬 AI VIDEO GENERATOR
-            </div>
+        const question =
+            item.querySelector(".faq-question");
 
-            <h1>Runway AI</h1>
+        if (!question) return;
 
-            <h2>
-                AI-Powered Video Generation & Creative Tools
-            </h2>
+        question.addEventListener("click", function () {
 
-            <p class="hero-description">
-                Runway is an AI-powered creative platform focused on video
-                generation and visual content creation. It provides AI tools
-                that can help creators experiment with video generation,
-                editing and other creative workflows.
-            </p>
+            const isActive =
+                item.classList.contains("active");
 
-            <div class="hero-buttons">
 
-                <a href="https://runwayml.com/"
-                   class="primary-btn"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Try Runway AI →
-                </a>
+            /* Close all FAQs */
 
-                <a href="#features" class="secondary-btn">
-                    Explore Features
-                </a>
+            faqItems.forEach(function (otherItem) {
 
-            </div>
+                otherItem.classList.remove("active");
 
-        </div>
+                const otherQuestion =
+                    otherItem.querySelector(".faq-question");
 
+                if (otherQuestion) {
 
-        <div class="hero-card">
+                    otherQuestion.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+                }
 
-            <div class="hero-icon">🎬</div>
+            });
 
-            <h3>Runway</h3>
 
-            <p class="hero-card-text">
-                AI Video & Creative Platform
-            </p>
+            /* Open clicked FAQ */
 
-            <div class="stars">★★★★★</div>
+            if (!isActive) {
 
-            <div class="hero-info">
+                item.classList.add("active");
 
-                <div>
-                    <span>Category</span>
-                    <strong>AI Video</strong>
-                </div>
+                question.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+            }
 
-                <div>
-                    <span>Best For</span>
-                    <strong>Creators & Filmmakers</strong>
-                </div>
+        });
 
-                <div>
-                    <span>Platform</span>
-                    <strong>Web</strong>
-                </div>
+    });
 
-            </div>
 
-        </div>
+    /* =====================================
+       SMOOTH INTERNAL LINKS
+    ===================================== */
 
-    </div>
+    const internalLinks =
+        document.querySelectorAll(
+            'a[href^="#"]'
+        );
 
-</section>
+    internalLinks.forEach(function (link) {
 
+        link.addEventListener("click", function (event) {
 
-<section class="content-section">
+            const targetId =
+                this.getAttribute("href");
 
-    <div class="container narrow">
+            if (
+                !targetId ||
+                targetId === "#" ||
+                targetId.length < 2
+            ) {
+                return;
+            }
 
-        <div class="section-heading">
 
-            <span>ABOUT RUNWAY</span>
+            const target =
+                document.querySelector(targetId);
 
-            <h2>What is Runway AI?</h2>
+            if (target) {
 
-        </div>
+                event.preventDefault();
 
-        <p>
-            Runway is an artificial intelligence platform focused on creative
-            video and visual content generation.
-        </p>
+                const header =
+                    document.querySelector(
+                        ".site-header"
+                    );
 
-        <p>
-            It provides AI-powered tools designed to help creators explore
-            new ways of generating and editing visual content.
-        </p>
+                const headerHeight =
+                    header
+                        ? header.offsetHeight
+                        : 0;
 
-        <p>
-            Runway can be useful for filmmakers, video creators, designers,
-            marketers and anyone interested in experimenting with AI-assisted
-            video production.
-        </p>
+                const targetPosition =
+                    target.getBoundingClientRect().top +
+                    window.pageYOffset -
+                    headerHeight -
+                    15;
 
-    </div>
+                window.scrollTo({
 
-</section>
+                    top: targetPosition,
 
+                    behavior: "smooth"
 
-<section class="features-section" id="features">
+                });
 
-    <div class="container">
+            }
 
-        <div class="section-heading center">
+        });
 
-            <span>KEY FEATURES</span>
+    });
 
-            <h2>Runway AI Features</h2>
 
-            <p>
-                Explore creative capabilities designed for AI-assisted video
-                and visual production.
-            </p>
+    /* =====================================
+       RUNWAY CTA CLICK TRACKING
+    ===================================== */
 
-        </div>
+    const runwayButtons =
+        document.querySelectorAll(
+            'a[href^="https://runwayml.com"]'
+        );
 
+    runwayButtons.forEach(function (button) {
 
-        <div class="features-grid">
+        button.addEventListener(
+            "click",
+            function () {
 
-            <div class="feature-card">
-                <div class="feature-icon">🎥</div>
-                <h3>AI Video Generation</h3>
-                <p>
-                    Create AI-assisted video content from creative prompts and
-                    supported inputs.
-                </p>
-            </div>
+                console.log(
+                    "Runway AI CTA clicked"
+                );
 
-            <div class="feature-card">
-                <div class="feature-icon">📝</div>
-                <h3>Prompt-Based Creation</h3>
-                <p>
-                    Describe creative ideas with prompts and explore AI-powered
-                    visual generation workflows.
-                </p>
-            </div>
+            }
+        );
 
-            <div class="feature-card">
-                <div class="feature-icon">✨</div>
-                <h3>Creative Effects</h3>
-                <p>
-                    Experiment with AI-powered visual effects and creative
-                    transformations.
-                </p>
-            </div>
+    });
 
-            <div class="feature-card">
-                <div class="feature-icon">🎞️</div>
-                <h3>Video Editing</h3>
-                <p>
-                    Work with AI-assisted tools designed to support video
-                    editing and creative production.
-                </p>
-            </div>
 
-            <div class="feature-card">
-                <div class="feature-icon">🖼️</div>
-                <h3>Visual Content</h3>
-                <p>
-                    Explore AI-assisted workflows for creating and transforming
-                    visual content.
-                </p>
-            </div>
+    /* =====================================
+       CURRENT YEAR
+    ===================================== */
 
-            <div class="feature-card">
-                <div class="feature-icon">🎬</div>
-                <h3>Filmmaking Workflows</h3>
-                <p>
-                    Experiment with AI tools that can support creative
-                    filmmaking and video production.
-                </p>
-            </div>
+    const yearElements =
+        document.querySelectorAll(
+            ".current-year"
+        );
 
-        </div>
+    yearElements.forEach(function (element) {
 
-    </div>
+        element.textContent =
+            new Date().getFullYear();
 
-</section>
+    });
 
-
-<section class="content-section light-section">
-
-    <div class="container">
-
-        <div class="section-heading center">
-
-            <span>USE CASES</span>
-
-            <h2>What Can You Use Runway For?</h2>
-
-        </div>
-
-
-        <div class="use-cases-grid">
-
-            <div class="use-case-card">
-
-                <span>🎬</span>
-
-                <h3>Filmmaking</h3>
-
-                <p>
-                    Experiment with AI-assisted visual concepts and creative
-                    filmmaking workflows.
-                </p>
-
-            </div>
-
-
-            <div class="use-case-card">
-
-                <span>📱</span>
-
-                <h3>Social Media Videos</h3>
-
-                <p>
-                    Explore AI-generated visual ideas for short-form and social
-                    media content.
-                </p>
-
-            </div>
-
-
-            <div class="use-case-card">
-
-                <span>🎨</span>
-
-                <h3>Creative Projects</h3>
-
-                <p>
-                    Create experimental visual content for creative projects
-                    and concepts.
-                </p>
-
-            </div>
-
-
-            <div class="use-case-card">
-
-                <span>📢</span>
-
-                <h3>Marketing Content</h3>
-
-                <p>
-                    Explore AI-assisted video workflows for advertising and
-                    marketing ideas.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="content-section">
-
-    <div class="container">
-
-        <div class="section-heading center">
-
-            <span>QUICK REVIEW</span>
-
-            <h2>Runway AI Pros & Cons</h2>
-
-        </div>
-
-
-        <div class="pros-cons-grid">
-
-            <div class="pros-box">
-
-                <h3>✓ Pros</h3>
-
-                <ul>
-                    <li>Powerful AI video-focused platform</li>
-                    <li>Useful for creative experimentation</li>
-                    <li>Designed for visual content creators</li>
-                    <li>Helpful for AI-assisted video workflows</li>
-                    <li>Interesting option for filmmakers and creators</li>
-                </ul>
-
-            </div>
-
-
-            <div class="cons-box">
-
-                <h3>✕ Cons</h3>
-
-                <ul>
-                    <li>AI-generated videos may need multiple attempts</li>
-                    <li>Results depend heavily on prompts and inputs</li>
-                    <li>Some advanced capabilities may require paid access</li>
-                    <li>AI video generation can consume credits quickly</li>
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="worth-section">
-
-    <div class="container narrow">
-
-        <div class="section-heading center">
-
-            <span>OUR TAKE</span>
-
-            <h2>Is Runway AI Worth Using?</h2>
-
-        </div>
-
-        <p>
-            Runway is an interesting choice for creators who want to explore
-            AI-powered video generation and visual production.
-        </p>
-
-        <p>
-            It can be particularly useful for filmmakers, designers, content
-            creators and marketers experimenting with new AI video workflows.
-            As with other generative AI tools, final results can vary depending
-            on the prompt, input and selected capabilities.
-        </p>
-
-        <div class="center-button">
-
-            <a href="https://runwayml.com/"
-               class="primary-btn"
-               target="_blank"
-               rel="noopener noreferrer">
-                Visit Runway AI →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="faq-section">
-
-    <div class="container narrow">
-
-        <div class="section-heading center">
-
-            <span>FAQ</span>
-
-            <h2>Runway AI FAQs</h2>
-
-        </div>
-
-
-        <div class="faq-list">
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-                    What is Runway AI?
-                    <span>+</span>
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Runway is an AI-powered creative platform focused on
-                        video generation and visual content creation.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-                    What is Runway AI used for?
-                    <span>+</span>
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Runway can be used for AI-assisted video generation,
-                        creative visual projects, filmmaking experiments,
-                        social media content and marketing concepts.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-                    Can Runway generate videos with AI?
-                    <span>+</span>
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Yes. Runway provides AI-powered video generation
-                        capabilities, with available features depending on the
-                        current product version and plan.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-                    Is Runway good for filmmakers?
-                    <span>+</span>
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Runway can be useful for filmmakers and visual creators
-                        who want to experiment with AI-assisted video and
-                        creative production.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-                    Is Runway AI free?
-                    <span>+</span>
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Runway offers different access and pricing options.
-                        Available features, credits and limits can change, so
-                        check the official Runway website for current details.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="directory-section">
-
-    <div class="container">
-
-        <div class="directory-box">
-
-            <div class="directory-label">
-                🤖 AIPROMPTENG AI TOOLS DIRECTORY
-            </div>
-
-            <h2>
-                Find the Right AI Tool for Your Workflow
-            </h2>
-
-            <p>
-                Explore AI writing, image generation, video, productivity,
-                coding and other AI tools.
-            </p>
-
-            <a href="/ai-tools/" class="directory-button">
-                Explore All AI Tools →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="related-section">
-
-    <div class="container">
-
-        <div class="section-heading center">
-
-            <span>EXPLORE MORE</span>
-
-            <h2>Related AI Tools</h2>
-
-        </div>
-
-
-        <div class="related-grid">
-
-            <a href="/ai-tools/midjourney/" class="related-card">
-
-                <div class="related-icon">🎨</div>
-
-                <div>
-                    <h3>Midjourney</h3>
-                    <p>AI Image Generation</p>
-                </div>
-
-                <span>→</span>
-
-            </a>
-
-
-            <a href="/ai-tools/canva/" class="related-card">
-
-                <div class="related-icon">🎨</div>
-
-                <div>
-                    <h3>Canva</h3>
-                    <p>AI Design</p>
-                </div>
-
-                <span>→</span>
-
-            </a>
-
-
-            <a href="/ai-tools/gemini/" class="related-card">
-
-                <div class="related-icon">✨</div>
-
-                <div>
-                    <h3>Google Gemini</h3>
-                    <p>AI Assistant</p>
-                </div>
-
-                <span>→</span>
-
-            </a>
-
-
-            <a href="/ai-tools/chatgpt/" class="related-card">
-
-                <div class="related-icon">💬</div>
-
-                <div>
-                    <h3>ChatGPT</h3>
-                    <p>AI Assistant</p>
-                </div>
-
-                <span>→</span>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-<footer class="site-footer">
-
-    <div class="container footer-inner">
-
-        <div class="footer-brand">
-
-            <a href="/" class="logo">
-                <span>AI</span>PromptEng
-            </a>
-
-            <p>
-                Discover the best AI tools, prompts, guides and resources
-                to improve your AI-powered workflow.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <h3>Explore</h3>
-
-            <a href="/ai-tools/">AI Tools</a>
-            <a href="/prompts/">Prompts</a>
-            <a href="/guides/">Guides</a>
-            <a href="/reviews/">Reviews</a>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <h3>Categories</h3>
-
-            <a href="/ai-tools/ai-writing/">AI Writing</a>
-            <a href="/ai-tools/ai-image/">AI Image</a>
-            <a href="/ai-tools/runway/">AI Video</a>
-            <a href="/ai-tools/">All AI Tools</a>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <div class="container">
-            © 2026 AIPromptEng. All rights reserved.
-        </div>
-
-    </div>
-
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
-</html>
+});
