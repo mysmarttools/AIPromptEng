@@ -221,11 +221,45 @@
     <priority>0.3</priority>
   </url>
 
-  
+  <url>
+    <loc>https://aiprompteng.vercel.app/ai-tools/semrush/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://aiprompteng.vercel.app/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <url>
+    <loc>https://aiprompteng.vercel.app/ai-tools/runway/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://aiprompteng.vercel.app/ai-tools/gemini/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://aiprompteng.vercel.app/ai-tools/copy.ai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aiprompteng.vercel.app/ai-tools/jasper/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+   <url>
+    <loc>https://aiprompteng.vercel.app/ai-tools/midjourney/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
 
 </urlset>
