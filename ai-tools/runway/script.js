@@ -1,15 +1,15 @@
-/* =========================================
-   AIPROMPTENG - RUNWAY AI PAGE JAVASCRIPT
-========================================= */
-
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =====================================
+    /* =========================================
        MOBILE MENU
-    ===================================== */
+    ========================================= */
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const mainNav = document.querySelector(".main-nav");
+    const menuToggle =
+        document.querySelector(".menu-toggle");
+
+    const mainNav =
+        document.querySelector(".main-nav");
+
 
     if (menuToggle && mainNav) {
 
@@ -19,16 +19,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             mainNav.classList.toggle("active");
 
-            const isOpen =
+            const opened =
                 mainNav.classList.contains("active");
 
             menuToggle.setAttribute(
                 "aria-expanded",
-                isOpen ? "true" : "false"
+                opened ? "true" : "false"
             );
 
             menuToggle.innerHTML =
-                isOpen ? "✕" : "☰";
+                opened ? "✕" : "☰";
+
         });
 
 
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const navLinks =
             mainNav.querySelectorAll("a");
 
+
         navLinks.forEach(function (link) {
 
             link.addEventListener("click", function () {
@@ -68,33 +70,38 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
 
                 menuToggle.innerHTML = "☰";
+
             });
 
         });
+
     }
 
 
-    /* =====================================
+    /* =========================================
        FAQ ACCORDION
-    ===================================== */
+    ========================================= */
 
     const faqItems =
         document.querySelectorAll(".faq-item");
+
 
     faqItems.forEach(function (item) {
 
         const question =
             item.querySelector(".faq-question");
 
-        if (!question) return;
+
+        if (!question) {
+            return;
+        }
+
 
         question.addEventListener("click", function () {
 
-            const isActive =
+            const currentlyOpen =
                 item.classList.contains("active");
 
-
-            /* Close all FAQs */
 
             faqItems.forEach(function (otherItem) {
 
@@ -103,20 +110,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 const otherQuestion =
                     otherItem.querySelector(".faq-question");
 
+
                 if (otherQuestion) {
 
                     otherQuestion.setAttribute(
                         "aria-expanded",
                         "false"
                     );
+
                 }
 
             });
 
 
-            /* Open clicked FAQ */
-
-            if (!isActive) {
+            if (!currentlyOpen) {
 
                 item.classList.add("active");
 
@@ -124,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "aria-expanded",
                     "true"
                 );
+
             }
 
         });
@@ -131,14 +139,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =====================================
-       SMOOTH INTERNAL LINKS
-    ===================================== */
+    /* =========================================
+       SMOOTH SCROLL
+    ========================================= */
 
     const internalLinks =
         document.querySelectorAll(
             'a[href^="#"]'
         );
+
 
     internalLinks.forEach(function (link) {
 
@@ -147,10 +156,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetId =
                 this.getAttribute("href");
 
+
             if (
                 !targetId ||
-                targetId === "#" ||
-                targetId.length < 2
+                targetId === "#"
             ) {
                 return;
             }
@@ -159,29 +168,32 @@ document.addEventListener("DOMContentLoaded", function () {
             const target =
                 document.querySelector(targetId);
 
+
             if (target) {
 
                 event.preventDefault();
 
+
                 const header =
-                    document.querySelector(
-                        ".site-header"
-                    );
+                    document.querySelector(".site-header");
+
 
                 const headerHeight =
                     header
                         ? header.offsetHeight
                         : 0;
 
-                const targetPosition =
+
+                const position =
                     target.getBoundingClientRect().top +
-                    window.pageYOffset -
+                    window.scrollY -
                     headerHeight -
                     15;
 
+
                 window.scrollTo({
 
-                    top: targetPosition,
+                    top: position,
 
                     behavior: "smooth"
 
@@ -194,39 +206,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =====================================
-       RUNWAY CTA CLICK TRACKING
-    ===================================== */
+    /* =========================================
+       CLOSE MENU ON ESCAPE
+    ========================================= */
 
-    const runwayButtons =
-        document.querySelectorAll(
-            'a[href^="https://runwayml.com"]'
-        );
+    document.addEventListener("keydown", function (event) {
 
-    runwayButtons.forEach(function (button) {
+        if (event.key === "Escape") {
 
-        button.addEventListener(
-            "click",
-            function () {
+            if (mainNav) {
+                mainNav.classList.remove("active");
+            }
 
-                console.log(
-                    "Runway AI CTA clicked"
+            if (menuToggle) {
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
                 );
 
+                menuToggle.innerHTML = "☰";
+
             }
-        );
+
+        }
 
     });
 
 
-    /* =====================================
+    /* =========================================
        CURRENT YEAR
-    ===================================== */
+    ========================================= */
 
     const yearElements =
-        document.querySelectorAll(
-            ".current-year"
-        );
+        document.querySelectorAll(".current-year");
+
 
     yearElements.forEach(function (element) {
 
@@ -234,5 +248,6 @@ document.addEventListener("DOMContentLoaded", function () {
             new Date().getFullYear();
 
     });
+
 
 });
