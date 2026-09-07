@@ -1,239 +1,231 @@
+document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener("DOMContentLoaded", function () {
+    /* MOBILE MENU */
 
-  const searchInput =
-    document.getElementById("promptSearch");
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
 
-  const categoryButtons =
-    document.querySelectorAll(".category-btn");
+    if (menuToggle && mainNav) {
 
-  const promptCards =
-    Array.from(document.querySelectorAll(".prompt-card"));
+        menuToggle.addEventListener("click", () => {
+            mainNav.classList.toggle("open");
+        });
 
-  const noResults =
-    document.getElementById("noResults");
+        mainNav.querySelectorAll("a").forEach(link => {
 
-  let currentCategory = "all";
+            link.addEventListener("click", () => {
+                mainNav.classList.remove("open");
+            });
 
+        });
 
-  /* FILTER PROMPTS */
+    }
 
-  function filterPrompts() {
 
-    const searchTerm =
-      searchInput.value.toLowerCase().trim();
+    /* PROMPT FILTER */
 
-    let visibleCount = 0;
+    const filterButtons =
+        document.querySelectorAll(".filter-btn");
 
-    promptCards.forEach(card => {
+    const promptCards =
+        document.querySelectorAll(".prompt-card");
 
-      const title =
-        card.dataset.title.toLowerCase();
+    const searchInput =
+        document.getElementById("promptSearch");
 
-      const category =
-        card.dataset.category.toLowerCase();
+    const noResults =
+        document.getElementById("noResults");
 
-      const description =
-        card.querySelector(".prompt-description")
-          .textContent
-          .toLowerCase();
+    let currentFilter = "all";
 
-      const matchesSearch =
-        title.includes(searchTerm) ||
-        category.includes(searchTerm) ||
-        description.includes(searchTerm);
 
-      const matchesCategory =
-        currentCategory === "all" ||
-        category === currentCategory;
+    function filterPrompts() {
 
-      if (matchesSearch && matchesCategory) {
+        const searchTerm =
+            searchInput
+                ? searchInput.value.toLowerCase().trim()
+                : "";
 
-        card.style.display = "";
+        let visibleCount = 0;
 
-        visibleCount++;
 
-      } else {
+        promptCards.forEach(card => {
 
-        card.style.display = "none";
+            const category =
+                card.dataset.category || "";
 
-      }
+            const title =
+                card.dataset.title || "";
 
-    });
+            const text =
+                card.textContent.toLowerCase();
 
+            const matchesCategory =
+                currentFilter === "all" ||
+                category === currentFilter;
 
-    noResults.style.display =
-      visibleCount === 0 ? "block" : "none";
+            const matchesSearch =
+                !searchTerm ||
+                title.includes(searchTerm) ||
+                text.includes(searchTerm);
 
-  }
 
+            if (matchesCategory && matchesSearch) {
 
-  /* SEARCH */
+                card.style.display = "";
+                visibleCount++;
 
-  searchInput.addEventListener(
-    "input",
-    filterPrompts
-  );
+            } else {
 
+                card.style.display = "none";
 
-  /* CATEGORY */
+            }
 
-  categoryButtons.forEach(button => {
+        });
 
-    button.addEventListener("click", function () {
 
-      categoryButtons.forEach(btn => {
-        btn.classList.remove("active");
-      });
+        if (noResults) {
 
-      this.classList.add("active");
+            noResults.hidden =
+                visibleCount !== 0;
 
-      currentCategory =
-        this.dataset.category;
-
-      filterPrompts();
-
-    });
-
-  });
-
-
-  /* COPY PROMPT */
-
-  const copyButtons =
-    document.querySelectorAll(".copy-btn");
-
-  copyButtons.forEach(button => {
-
-    button.addEventListener("click", async function () {
-
-      const prompt =
-        this.dataset.prompt;
-
-      try {
-
-        await navigator.clipboard.writeText(prompt);
-
-        const originalText =
-          this.textContent;
-
-        this.textContent =
-          "✓ Copied!";
-
-        this.classList.add("copied");
-
-        setTimeout(() => {
-
-          this.textContent =
-            originalText;
-
-          this.classList.remove("copied");
-
-        }, 1800);
-
-      } catch (error) {
-
-        const textArea =
-          document.createElement("textarea");
-
-        textArea.value = prompt;
-
-        document.body.appendChild(textArea);
-
-        textArea.select();
-
-        document.execCommand("copy");
-
-        textArea.remove();
-
-        const originalText =
-          this.textContent;
-
-        this.textContent =
-          "✓ Copied!";
-
-        this.classList.add("copied");
-
-        setTimeout(() => {
-
-          this.textContent =
-            originalText;
-
-          this.classList.remove("copied");
-
-        }, 1800);
-
-      }
-
-    });
-
-  });
-
-
-  /* FAQ */
-
-  const faqItems =
-    document.querySelectorAll(".faq-item");
-
-  faqItems.forEach(item => {
-
-    const question =
-      item.querySelector(".faq-question");
-
-    question.addEventListener("click", () => {
-
-      faqItems.forEach(otherItem => {
-
-        if (otherItem !== item) {
-          otherItem.classList.remove("active");
         }
 
-      });
-
-      item.classList.toggle("active");
-
-    });
-
-  });
+    }
 
 
-  /* MOBILE MENU */
+    filterButtons.forEach(button => {
 
-  const menuToggle =
-    document.getElementById("menuToggle");
+        button.addEventListener("click", () => {
 
-  const mainNav =
-    document.getElementById("mainNav");
+            filterButtons.forEach(btn => {
+                btn.classList.remove("active");
+            });
 
-  menuToggle.addEventListener("click", () => {
+            button.classList.add("active");
 
-    mainNav.classList.toggle("active");
+            currentFilter =
+                button.dataset.filter;
 
-    menuToggle.textContent =
-      mainNav.classList.contains("active")
-        ? "✕"
-        : "☰";
+            filterPrompts();
 
-  });
-
-
-  /* CLOSE MENU */
-
-  mainNav.querySelectorAll("a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-      mainNav.classList.remove("active");
-
-      menuToggle.textContent = "☰";
+        });
 
     });
 
-  });
+
+    if (searchInput) {
+
+        searchInput.addEventListener(
+            "input",
+            filterPrompts
+        );
+
+    }
 
 
-  /* INITIAL FILTER */
+    /* COPY PROMPT */
 
-  filterPrompts();
+    const copyButtons =
+        document.querySelectorAll(".copy-btn");
+
+
+    copyButtons.forEach(button => {
+
+        button.addEventListener("click", async () => {
+
+            const prompt =
+                button.dataset.prompt;
+
+            if (!prompt) return;
+
+
+            try {
+
+                await navigator.clipboard.writeText(prompt);
+
+                const originalText =
+                    button.textContent;
+
+                button.textContent =
+                    "✓ Prompt Copied!";
+
+                button.classList.add("copied");
+
+
+                setTimeout(() => {
+
+                    button.textContent =
+                        originalText;
+
+                    button.classList.remove("copied");
+
+                }, 1800);
+
+
+            } catch (error) {
+
+                const textarea =
+                    document.createElement("textarea");
+
+                textarea.value = prompt;
+
+                document.body.appendChild(textarea);
+
+                textarea.select();
+
+                document.execCommand("copy");
+
+                textarea.remove();
+
+
+                button.textContent =
+                    "✓ Prompt Copied!";
+
+                button.classList.add("copied");
+
+
+                setTimeout(() => {
+
+                    button.textContent =
+                        "Copy Prompt";
+
+                    button.classList.remove("copied");
+
+                }, 1800);
+
+            }
+
+        });
+
+    });
+
+
+    /* CURRENT YEAR */
+
+    const year =
+        document.getElementById("year");
+
+    if (year) {
+
+        year.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* ESCAPE KEY */
+
+    document.addEventListener("keydown", event => {
+
+        if (event.key === "Escape") {
+
+            if (mainNav) {
+                mainNav.classList.remove("open");
+            }
+
+        }
+
+    });
 
 });
