@@ -1,1 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Prompts | Free ChatGPT Prompts for Writing, SEO & Marketing – AIPromptEng</title>
+
+    <meta name="description"
+        content="Explore free AI prompts for ChatGPT, Gemini and other AI tools. Find ready-to-use prompts for writing, SEO, marketing, business, productivity and social media.">
+
+    <meta name="keywords"
+        content="AI prompts, ChatGPT prompts, free AI prompts, AI writing prompts, SEO prompts, marketing prompts, business prompts, prompt engineering">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://aiprompteng.vercel.app/prompts/">
+
+    <meta property="og:title"
+        content="AI Prompts | Free ChatGPT Prompts – AIPromptEng">
+
+    <meta property="og:description"
+        content="Discover free and useful AI prompts for writing, SEO, marketing, business and productivity.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url"
+        content="https://aiprompteng.vercel.app/prompts/">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a href="/" class="logo">
+                <span class="logo-icon">AI</span>
+                <span class="logo-text">PromptEng</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+
+                <a href="/">Home</a>
+
+                <a href="/ai-tools/">
+                    AI Tools
+                </a>
+
+                <a href="/prompts/" class="active">
+                    AI Prompts
+                </a>
+
+                <a href="/blog/">
+                    Blog
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <span class="eyebrow">
+                        ✨ FREE AI PROMPT LIBRARY
+                    </span>
+
+                    <h1>
+                        Powerful AI Prompts for
+                        <span>Better Results</span>
+                    </h1>
+
+                    <p>
+                        Explore ready-to-use AI prompts for ChatGPT,
+                        Gemini and other AI tools. Create better content,
+                        improve SEO, grow your business and work smarter.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#prompt-library"
+                            class="btn btn-primary">
+                            Explore AI Prompts →
+                        </a>
+
+                        <a href="/ai-tools/"
+                            class="btn btn-secondary">
+                            Explore AI Tools
+                        </a>
+
+                    </div>
+
+                    <div class="hero-stats">
+
+                        <div class="stat">
+                            <strong>Free</strong>
+                            <span>Prompts</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>7+</strong>
+                            <span>Categories</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>AI</strong>
+                            <span>Ready</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROMPT LIBRARY ================= -->
+
+        <section class="prompt-section" id="prompt-library">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        PROMPT LIBRARY
+                    </span>
+
+                    <h2>
+                        Find the Perfect AI Prompt
+                    </h2>
+
+                    <p>
+                        Search or select a category to find the right
+                        prompt for your task.
+                    </p>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="search-wrapper">
+
+                    <div class="search-box">
+
+                        <span class="search-icon">
+                            🔍
+                        </span>
+
+                        <input
+                            type="search"
+                            id="promptSearch"
+                            placeholder="Search AI prompts..."
+                            autocomplete="off"
+                        >
+
+                        <button
+                            id="clearSearch"
+                            class="clear-search"
+                            type="button"
+                            aria-label="Clear search"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FILTERS -->
+
+                <div class="filters" id="filters">
+
+                    <button
+                        class="filter-btn active"
+                        data-filter="all"
+                    >
+                        All Prompts
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="writing"
+                    >
+                        ✍️ Writing
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="seo"
+                    >
+                        🔍 SEO
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="marketing"
+                    >
+                        📢 Marketing
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="business"
+                    >
+                        💼 Business
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="productivity"
+                    >
+                        ⚡ Productivity
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="social"
+                    >
+                        📱 Social Media
+                    </button>
+
+                </div>
+
+
+                <!-- PROMPT COUNT -->
+
+                <div class="results-info">
+
+                    <span id="resultsCount">
+                        Showing 8 prompts
+                    </span>
+
+                </div>
+
+
+                <!-- PROMPT GRID -->
+
+                <div class="prompt-grid" id="promptGrid">
+
+
+                    <!-- 01 BLOG WRITER -->
+
+                    <article
+                        class="prompt-card"
+                        data-category="writing"
+                        data-search="blog post writer article writing content writer seo blog"
+                    >
+
+                        <div class="card-top">
+
+                            <div class="prompt-icon">
+                                ✍️
+                            </div>
+
+                            <span class="category-badge">
+                                Writing
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            SEO Blog Post Writer
+                        </h3>
+
+                        <p>
+                            Create a detailed, engaging and
+                            SEO-friendly blog post on any topic.
+                        </p>
+
+                        <div class="prompt-preview">
+
+                            <span class="preview-label">
+                                PROMPT
+                            </span>
+
+                            <p>
+                                Write a comprehensive SEO-friendly
+                                blog post about [TOPIC]...
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="copy-btn"
+                            data-prompt="Act as an expert SEO content writer. Write a comprehensive, engaging and SEO-friendly blog post about [TOPIC]. Include an attention-grabbing introduction, H2 and H3 headings, useful information, examples, FAQs and a strong conclusion. Keep the content natural, helpful and easy to read."
+                        >
+                            <span>Copy Prompt</span>
+                            <span>⧉</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- 02 SEO -->
+
+                    <article
+                        class="prompt-card"
+                        data-category="seo"
+                        data-search="seo keyword research keywords search intent seo expert"
+                    >
+
+                        <div class="card-top">
+
+                            <div class="prompt-icon">
+                                🔍
+                            </div>
+
+                            <span class="category-badge">
+                                SEO
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            SEO Keyword Research
+                        </h3>
+
+                        <p>
+                            Find primary, secondary and long-tail
+                            keywords for your website.
+                        </p>
+
+                        <div class="prompt-preview">
+
+                            <span class="preview-label">
+                                PROMPT
+                            </span>
+
+                            <p>
+                                Find high-value SEO keywords
+                                for [TOPIC]...
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="copy-btn"
+                            data-prompt="Act as an expert SEO keyword researcher. Find relevant primary, secondary and long-tail keywords for [TOPIC]. Group the keywords by search intent and suggest keywords suitable for homepage, category pages, product pages and blog posts. Also identify potential low-competition opportunities."
+                        >
+                            <span>Copy Prompt</span>
+                            <span>⧉</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- 03 MARKETING -->
+
+                    <article
+                        class="prompt-card"
+                        data-category="marketing"
+                        data-search="marketing copy sales advertisement ad copy product marketing"
+                    >
+
+                        <div class="card-top">
+
+                            <div class="prompt-icon">
+                                📢
+                            </div>
+
+                            <span class="category-badge">
+                                Marketing
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Marketing Copy Generator
+                        </h3>
+
+                        <p>
+                            Create persuasive marketing copy that
+                            attracts customers and drives action.
+                        </p>
+
+                        <div class="prompt-preview">
+
+                            <span class="preview-label">
+                                PROMPT
+                            </span>
+
+                            <p>
+                                Create persuasive marketing copy
+                                for [PRODUCT]...
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="copy-btn"
+                            data-prompt="Act as an expert marketing copywriter. Create persuasive marketing copy for [PRODUCT/SERVICE]. Identify the target customer's main pain points, explain the benefits clearly, create a compelling value proposition and finish with a strong call to action. Keep the tone professional, natural and convincing."
+                        >
+                            <span>Copy Prompt</span>
+                            <span>⧉</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- 04 BUSINESS -->
+
+                    <article
+                        class="prompt-card"
+                        data-category="business"
+                        data-search="business idea startup business plan entrepreneur online business"
+                    >
+
+                        <div class="card-top">
+
+                            <div class="prompt-icon">
+                                💼
+                            </div>
+
+                            <span class="category-badge">
+                                Business
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Business Idea Generator
+                        </h3>
+
+                        <p>
+                            Generate realistic business ideas based
+                            on skills, budget and target market.
+                        </p>
+
+                        <div class="prompt-preview">
+
+                            <span class="preview-label">
+                                PROMPT
+                            </span>
+
+                            <p>
+                                Generate business ideas based
+                                on my skills...
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="copy-btn"
+                            data-prompt="Act as an experienced business strategist. Generate 10 realistic business ideas based on my skills, available budget and target market. For each idea explain the business model, target audience, startup requirements, potential challenges and possible revenue streams. Prioritize ideas that can realistically be started online."
+                        >
+                            <span>Copy Prompt</span>
+                            <span>⧉</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- 05 PRODUCTIVITY -->
+
+                    <article
+                        class="prompt-card"
+                        data-category="productivity"
+                        data-search="productivity daily planner schedule tasks time management work"
+                    >
+
+                        <div class="card-top">
+
+                            <div class="prompt-icon">
+                                ⚡
+                            </div>
+
+                            <span class="category-badge">
+                                Productivity
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            AI Daily Planner
+                        </h3>
+
+                        <p>
+                            Turn your tasks into an organized and
+                            practical daily schedule.
+                        </p>
+
+                        <div class="prompt-preview">
+
+                            <span class="preview-label">
+                                PROMPT
+                            </span>
+
+                            <p>
+                                Create a productive schedule
+                                for my tasks...
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="copy-btn"
+                            data-prompt="Act as a productivity coach. Create a realistic daily schedule based on these tasks: [TASKS]. Prioritize the most important tasks, estimate the time required for each task, include reasonable breaks and organize everything into a practical timetable. Avoid creating an unrealistic schedule."
+                        >
+                            <span>Copy Prompt</span>
+                            <span>⧉</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- 06 SOCIAL -->
+
+                    <article
+                        class="prompt-card"
+                        data-category="social"
+                        data-search="social media instagram facebook linkedin caption hashtags social post"
+                    >
+
+                        <div class="card-top">
+
+                            <div class="prompt-icon">
+                                📱
+                            </div>
+
+                            <span class="category-badge">
+                                Social Media
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Social Media Captions
+                        </h3>
+
+                        <p>
+                            Create engaging social media captions
+                            for products, brands and content.
+                        </p>
+
+                        <div class="prompt-preview">
+
+                            <span class="preview-label">
+                                PROMPT
+                            </span>
+
+                            <p>
+                                Create engaging captions
+                                for [TOPIC]...
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="copy-btn"
+                            data-prompt="Create 10 engaging social media captions for [TOPIC/PRODUCT]. Make each caption different, natural and attention-grabbing. Adapt the tone for [PLATFORM]. Include relevant hashtags and a clear call to action when appropriate. Avoid generic or repetitive wording."
+                        >
+                            <span>Copy Prompt</span>
+                            <span>⧉</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- 07 PRODUCT DESCRIPTION -->
+
+                    <article
+                        class="prompt-card"
+                        data-category="marketing"
+                        data-search="product description ecommerce shopify product copy online store sales"
+                    >
+
+                        <div class="card-top">
+
+                            <div class="prompt-icon">
+                                🛍️
+                            </div>
+
+                            <span class="category-badge">
+                                Marketing
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Product Description Writer
+                        </h3>
+
+                        <p>
+                            Write persuasive and SEO-friendly product
+                            descriptions for online stores.
+                        </p>
+
+                        <div class="prompt-preview">
+
+                            <span class="preview-label">
+                                PROMPT
+                            </span>
+
+                            <p>
+                                Write an SEO product description
+                                for [PRODUCT]...
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="copy-btn"
+                            data-prompt="Act as an eCommerce SEO copywriter. Write a persuasive and SEO-friendly product description for [PRODUCT]. Include a compelling opening, key features, customer benefits, use cases and a clear call to action. Naturally include the primary keyword [KEYWORD] without keyword stuffing."
+                        >
+                            <span>Copy Prompt</span>
+                            <span>⧉</span>
+                        </button>
+
+                    </article>
+
+
+                    <!-- 08 EMAIL -->
+
+                    <article
+                        class="prompt-card"
+                        data-category="writing"
+                        data-search="email email writing professional email business communication message"
+                    >
+
+                        <div class="card-top">
+
+                            <div class="prompt-icon">
+                                📧
+                            </div>
+
+                            <span class="category-badge">
+                                Writing
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Professional Email Writer
+                        </h3>
+
+                        <p>
+                            Create clear, professional and natural
+                            emails for business and personal use.
+                        </p>
+
+                        <div class="prompt-preview">
+
+                            <span class="preview-label">
+                                PROMPT
+                            </span>
+
+                            <p>
+                                Write a professional email
+                                about [SUBJECT]...
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="copy-btn"
+                            data-prompt="Act as a professional communication expert. Write a clear, polite and professional email about [SUBJECT]. The recipient is [RECIPIENT]. Keep the message concise, natural and easy to understand. Include an appropriate opening, the main message, a clear next step if needed and a professional closing."
+                        >
+                            <span>Copy Prompt</span>
+                            <span>⧉</span>
+                        </button>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- NO RESULTS -->
+
+                <div
+                    class="no-results"
+                    id="noResults"
+                    hidden
+                >
+
+                    <div class="no-results-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        No prompts found
+                    </h3>
+
+                    <p>
+                        Try another search keyword or choose
+                        a different category.
+                    </p>
+
+                    <button
+                        class="reset-btn"
+                        id="resetSearch"
+                    >
+                        Show All Prompts
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INFO ================= -->
+
+        <section class="info-section">
+
+            <div class="container">
+
+                <div class="info-grid">
+
+                    <div class="info-content">
+
+                        <span class="section-label">
+                            WHY USE AI PROMPTS?
+                        </span>
+
+                        <h2>
+                            Get Better Results From AI
+                        </h2>
+
+                        <p>
+                            A well-written prompt gives AI clear
+                            instructions about what you want. Instead
+                            of starting from scratch, use our ready-made
+                            prompts and customize them for your needs.
+                        </p>
+
+                        <p>
+                            These prompts can be used with popular AI
+                            tools such as ChatGPT, Gemini and other
+                            AI assistants.
+                        </p>
+
+                    </div>
+
+
+                    <div class="benefits">
+
+                        <div class="benefit-card">
+
+                            <span>🎯</span>
+
+                            <div>
+                                <h3>
+                                    Clear Instructions
+                                </h3>
+
+                                <p>
+                                    Give AI better context and
+                                    instructions.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="benefit-card">
+
+                            <span>⚡</span>
+
+                            <div>
+                                <h3>
+                                    Save Time
+                                </h3>
+
+                                <p>
+                                    Start with proven prompt
+                                    structures instead of writing
+                                    from scratch.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="benefit-card">
+
+                            <span>🚀</span>
+
+                            <div>
+                                <h3>
+                                    Better Results
+                                </h3>
+
+                                <p>
+                                    Improve the quality and usefulness
+                                    of AI-generated responses.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <span class="cta-label">
+                        🚀 DISCOVER MORE
+                    </span>
+
+                    <h2>
+                        Find the Right AI Tool
+                    </h2>
+
+                    <p>
+                        Explore our growing directory of AI tools
+                        for writing, SEO, images, productivity,
+                        marketing and more.
+                    </p>
+
+                    <a
+                        href="/ai-tools/"
+                        class="btn btn-primary"
+                    >
+                        Explore AI Tools →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <a href="/" class="footer-logo">
+
+                        <span class="logo-icon">
+                            AI
+                        </span>
+
+                        <span>
+                            PromptEng
+                        </span>
+
+                    </a>
+
+                    <p>
+                        Discover AI tools, powerful prompts and
+                        useful resources to work smarter with AI.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="/">
+                        Home
+                    </a>
+
+                    <a href="/ai-tools/">
+                        AI Tools
+                    </a>
+
+                    <a href="/prompts/">
+                        AI Prompts
+                    </a>
+
+                    <a href="/blog/">
+                        Blog
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        AI Tools
+                    </h3>
+
+                    <a href="/ai-tools/chatgpt/">
+                        ChatGPT
+                    </a>
+
+                    <a href="/ai-tools/gemini/">
+                        Gemini
+                    </a>
+
+                    <a href="/ai-tools/canva/">
+                        Canva
+                    </a>
+
+                    <a href="/ai-tools/semrush/">
+                        Semrush
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Resources
+                    </h3>
+
+                    <a href="/prompts/">
+                        Prompt Library
+                    </a>
+
+                    <a href="/ai-tools/">
+                        AI Tool Directory
+                    </a>
+
+                    <a href="/blog/">
+                        AI Blog
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © <span id="currentYear"></span>
+                    AIPromptEng. All rights reserved.
+                </p>
+
+                <p>
+                    AI Tools • AI Prompts • AI Resources
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
