@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://aiprompteng.vercel.app/sitemap.xml
