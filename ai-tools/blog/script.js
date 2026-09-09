@@ -1,101 +1,27 @@
-/* =========================================================
-   AIPROMPTENG BLOG JAVASCRIPT
-========================================================= */
-
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ===============================
-       MOBILE MENU
-    =============================== */
+    const menuBtn = document.getElementById("menuBtn");
+    const nav = document.querySelector(".nav");
 
-    const menuToggle = document.getElementById("menuToggle");
-    const navbar = document.getElementById("navbar");
+    if (menuBtn && nav) {
 
-    if (menuToggle && navbar) {
+        menuBtn.addEventListener("click", function () {
+            nav.classList.toggle("show");
 
-        menuToggle.addEventListener("click", function () {
-
-            navbar.classList.toggle("show");
-
-            if (navbar.classList.contains("show")) {
-                menuToggle.textContent = "✕";
+            if (nav.classList.contains("show")) {
+                menuBtn.innerHTML = "✕";
             } else {
-                menuToggle.textContent = "☰";
+                menuBtn.innerHTML = "☰";
             }
-
         });
 
-    }
-
-
-    /* ===============================
-       FAQ ACCORDION
-    =============================== */
-
-    const faqQuestions =
-        document.querySelectorAll(".faq-question");
-
-    faqQuestions.forEach(function (question) {
-
-        question.addEventListener("click", function () {
-
-            const currentItem =
-                question.closest(".faq-item");
-
-            const allItems =
-                document.querySelectorAll(".faq-item");
-
-            allItems.forEach(function (item) {
-
-                if (item !== currentItem) {
-                    item.classList.remove("open");
-                }
-
+        // Close menu after clicking a link
+        nav.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                nav.classList.remove("show");
+                menuBtn.innerHTML = "☰";
             });
-
-            currentItem.classList.toggle("open");
-
         });
-
-    });
-
-
-    /* ===============================
-       CURRENT YEAR
-    =============================== */
-
-    const yearElement =
-        document.getElementById("year");
-
-    if (yearElement) {
-
-        yearElement.textContent =
-            new Date().getFullYear();
-
     }
-
-
-    /* ===============================
-       CLOSE MOBILE MENU ON LINK CLICK
-    =============================== */
-
-    const navLinks =
-        document.querySelectorAll(".navbar a");
-
-    navLinks.forEach(function (link) {
-
-        link.addEventListener("click", function () {
-
-            if (navbar) {
-                navbar.classList.remove("show");
-            }
-
-            if (menuToggle) {
-                menuToggle.textContent = "☰";
-            }
-
-        });
-
-    });
 
 });
