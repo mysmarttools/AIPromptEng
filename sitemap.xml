@@ -4,14 +4,14 @@
   <!-- Homepage -->
   <url>
     <loc>https://aiprompteng.vercel.app/</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Main Sections -->
   <url>
     <loc>https://aiprompteng.vercel.app/ai-tools.html</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
@@ -264,14 +264,14 @@
   <!-- Blog Homepage -->
     <url>
         <loc>https://aiprompteng.vercel.app/Blog/</loc>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Blog Article -->
     <url>
         <loc>https://aiprompteng.vercel.app/Blog/how-to-write-better-ai-prompts/</loc>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
 
